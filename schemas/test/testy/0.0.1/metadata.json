@@ -1,0 +1,9 @@
+{
+  "name": "Template App",
+  "description": "Add your description here",
+  "docs": "",
+  "website": "https://abstract.money",
+  "type": "app",
+  "icon": "GiTrade",
+  "enabled": true
+}
