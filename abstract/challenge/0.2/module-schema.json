@@ -451,7 +451,6 @@
         "description": "Arguments for new challenge",
         "type": "object",
         "required": [
-          "description",
           "duration",
           "init_friends",
           "name",
@@ -461,7 +460,10 @@
         "properties": {
           "description": {
             "description": "Description of the challenge",
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "duration": {
             "description": "In what duration challenge should end",
