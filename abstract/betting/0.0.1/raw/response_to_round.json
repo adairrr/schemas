@@ -4,7 +4,6 @@
   "type": "object",
   "required": [
     "bet_count",
-    "description",
     "id",
     "name",
     "status",
@@ -18,12 +17,13 @@
       "minimum": 0.0
     },
     "description": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "id": {
-      "type": "integer",
-      "format": "uint64",
-      "minimum": 0.0
+      "$ref": "#/definitions/AccountId"
     },
     "name": {
       "type": "string"
@@ -38,7 +38,7 @@
       }
     },
     "total_bet": {
-      "$ref": "#/definitions/AnsAsset"
+      "$ref": "#/definitions/Coin"
     }
   },
   "additionalProperties": false,
@@ -94,28 +94,24 @@
         }
       ]
     },
-    "AnsAsset": {
+    "ChainName": {
+      "description": "The name of a chain, aka the chain-id without the post-fix number. ex. `cosmoshub-4` -> `cosmoshub`, `juno-1` -> `juno`",
+      "type": "string"
+    },
+    "Coin": {
       "type": "object",
       "required": [
         "amount",
-        "name"
+        "denom"
       ],
       "properties": {
         "amount": {
           "$ref": "#/definitions/Uint128"
         },
-        "name": {
-          "$ref": "#/definitions/AssetEntry"
+        "denom": {
+          "type": "string"
         }
       }
-    },
-    "AssetEntry": {
-      "description": "An unchecked ANS asset entry. This is a string that is formatted as `src_chain>[intermediate_chain>]asset_name`",
-      "type": "string"
-    },
-    "ChainName": {
-      "description": "The name of a chain, aka the chain-id without the post-fix number. ex. `cosmoshub-4` -> `cosmoshub`, `juno-1` -> `juno`",
-      "type": "string"
     },
     "RoundStatus": {
       "oneOf": [

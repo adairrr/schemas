@@ -3,11 +3,15 @@
   "title": "ConfigResponse",
   "type": "object",
   "required": [
+    "bet_denom",
     "rake"
   ],
   "properties": {
+    "bet_denom": {
+      "type": "string"
+    },
     "rake": {
-      "description": "Address of the LP token",
+      "description": "House rake percentage",
       "allOf": [
         {
           "$ref": "#/definitions/Decimal"

@@ -1,11 +1,9 @@
 {
-  "name": "Betting",
-  "description": "Bet on winning hackathon teams",
-  "website": "https://abstract.money/",
+  "name": "Account Prediction App",
+  "description": "Create a round with multiple accounts to predict the winner",
+  "website": "",
   "docs": "",
   "type": "app",
-  "icon": "RiCoinsLine",
-  "enabled": true,
-  "category": "SocialFi",
-  "readme": "https://raw.githubusercontent.com/AbstractSDK/abstract/main/modules/contracts/apps/betting/README.md"
+  "icon": "GiTrade",
+  "enabled": true
 }

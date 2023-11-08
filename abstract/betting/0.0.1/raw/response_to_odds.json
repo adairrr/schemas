@@ -4,17 +4,11 @@
   "description": "State query response",
   "type": "object",
   "required": [
-    "odds",
-    "round_id"
+    "odds"
   ],
   "properties": {
     "odds": {
       "$ref": "#/definitions/Decimal"
-    },
-    "round_id": {
-      "type": "integer",
-      "format": "uint64",
-      "minimum": 0.0
     }
   },
   "additionalProperties": false,

@@ -3,8 +3,7 @@
   "title": "ListOddsResponse",
   "type": "object",
   "required": [
-    "odds",
-    "round_id"
+    "odds"
   ],
   "properties": {
     "odds": {
@@ -12,11 +11,6 @@
       "items": {
         "$ref": "#/definitions/AccountOdds"
       }
-    },
-    "round_id": {
-      "type": "integer",
-      "format": "uint64",
-      "minimum": 0.0
     }
   },
   "additionalProperties": false,

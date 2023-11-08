@@ -26,6 +26,10 @@
   },
   "additionalProperties": false,
   "definitions": {
+    "AssetEntry": {
+      "description": "An unchecked ANS asset entry. This is a string that is formatted as `src_chain>[intermediate_chain>]asset_name`",
+      "type": "string"
+    },
     "BaseInstantiateMsg": {
       "description": "Used by Module Factory to instantiate App",
       "type": "object",
@@ -47,6 +51,16 @@
       "description": "Init msg",
       "type": "object",
       "properties": {
+        "bet_asset": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/AssetEntry"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "rake": {
           "anyOf": [
             {
